@@ -1,0 +1,26 @@
+package textfiles;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class ReadFile{
+   private String path;
+   public ReadFile(){
+   String path = "https://github.com/DovKrugerECEClasses/CPE-552hw/blob/master/parsefile/shortwords.txt";
+   }
+public String[] OpenFile() throws IOException{
+   FileReader fr = new FileReader(path);
+   BufferedReader textReader = new BufferedReader(fr);
+   int numberOfLines = 155;
+   String[] textData = new String[numberOfLines];
+   int i;
+   for(i=0; i<numberOfLines; i++){
+   textData[i] = textReader.readLine();
+   textReader.close();
+   return textData;
+   }
+public static void main(String[] args){
+   ReadFile f = new ReadFile();
+   System.out.println(f.OpenFile());
+   }
+  }
