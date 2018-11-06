@@ -1,0 +1,12 @@
+public class Regex{
+  public static void main(String[] args){
+    public interface IGame{
+    }
+    public class Game{
+    }
+    String s1 = "public interface IGame{";
+    String s2 = "private class Game{";
+    System.out.println(s1.matches("(?:public|protected|private|static)\\s+(?:class|interface)\\s+\\w+\\s*\\{"));
+    System.out.println(s2.matches("(?:public|protected|private|static)\\s+(?:class|interface)\\s+\\w+\\s*\\{"));
+   }
+ }
